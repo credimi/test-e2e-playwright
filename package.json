@@ -1,0 +1,21 @@
+{
+  "name": "test-e2e-playwright",
+  "version": "1.0.0",
+  "description": "A playwright test",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/credimi/test-e2e-playwright.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/credimi/test-e2e-playwright/issues"
+  },
+  "homepage": "https://github.com/credimi/test-e2e-playwright#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.21.1"
+  }
+}
