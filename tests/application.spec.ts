@@ -6,7 +6,7 @@ test.beforeAll((async () => {
   const browser = await chromium.launch({ headless: false });
 
   // Setup context however you like.
-  const context = await browser.newContext({ ignoreHTTPSErrors: true  });
+  const context = await browser.newContext({ ignoreHTTPSErrors: true });
   await context.route('**/*', route => route.continue());
 
   // Pause the page, and start recording manually.
@@ -15,7 +15,7 @@ test.beforeAll((async () => {
 }))
 
 test.beforeEach(async ({ page }) => {
-  await page.goto('https://www.test-e2e-playwright-website.qa.credimi.com/ottieni-proposta')
+  await page.goto('https://www.test-20220419-website.qa.credimi.com/ottieni-proposta')
 })
 
 
