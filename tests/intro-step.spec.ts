@@ -15,7 +15,7 @@ test.describe('Intro Step Application tests', () => {
         // Click text=Email obbligatoria
         await expect(page.locator('text=Email obbligatoria')).toBeVisible();
         // Click text=Partita IVA obbligatoria
-        await expect(page.locator('text=Partita IVA obbligatoria')).toBeVisible();
+        await expect(page.locator('text=Partita obbligatoria')).toBeVisible();
         // Click text=Campo obbligatorio
         await expect(page.locator('text=Campo obbligatorio')).toBeVisible();
     });
@@ -25,8 +25,6 @@ test.describe('Intro Step Application tests', () => {
         await page.goto('https://www.test-20220419-website.qa.credimi.com/ottieni-proposta/');
         // Click text=Accetta
         await page.locator('text=Accetta').click();
-        // Click input[name="email"]
-        await page.locator('input[name="email"]').click();
         // Fill input[name="email"]
         await page.locator('input[name="email"]').fill('ciccio@email');
         // Click text=Verifica se la tua azienda è finanziabile in 1 clickEmailPartita IVAInserisci la >> svg
@@ -65,12 +63,8 @@ test.describe('Intro Step Application tests', () => {
         await page.goto('https://www.test-20220419-website.qa.credimi.com/ottieni-proposta/#step-intro');
         // Click text=Accetta
         await page.locator('text=Accetta').click();
-        // Click input[name="email"]
-        await page.locator('input[name="email"]').click();
         // Fill input[name="email"]
         await page.locator('input[name="email"]').fill('test@credimi.com');
-        // Press Tab
-        await page.locator('input[name="email"]').press('Tab');
         // Fill text=Partita IVAInserisci la Partita IVA dell’azienda per cui stai facendo richiesta >> [placeholder=" "]
         await page.locator('text=Partita IVAInserisci la Partita IVA dell’azienda per cui stai facendo richiesta >> [placeholder=" "]').fill('03544290830');
         // Click text=Verifica se la tua azienda è finanziabile in 1 clickEmailPartita IVAInserisci la >> svg
