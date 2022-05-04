@@ -16,6 +16,8 @@ test.describe('Intro Step Application tests', () => {
         await expect(page.locator('text=Email obbligatoria')).toBeVisible();
         // Click text=Partita IVA obbligatoria
         await expect(page.locator('text=Partita obbligatoria')).toBeVisible();
+        // Take a screenshot of the failed step
+        await page.screenshot({ path: 'screenshot.png' });
         // Click text=Campo obbligatorio
         await expect(page.locator('text=Campo obbligatorio')).toBeVisible();
     });
