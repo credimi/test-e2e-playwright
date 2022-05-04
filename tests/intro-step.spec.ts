@@ -5,13 +5,10 @@ test.use({
 });
 
 test.describe('Intro Step Application tests', () => {
-    test('If the user fills correctly the intro form but the VAT code is not active, then it shows a message "Partita IVA non trovata"', async ({ page }) => {
+    test('4. If the user fills correctly the intro form but the VAT code is not active, then on the page is shown "Partita IVA non trovata"', async ({ page }) => {
 
         // Go to https://www.test-e2e-playwright-website.qa.credimi.com/ottieni-proposta/
         await page.goto('https://www.test-e2e-playwright-website.qa.credimi.com/ottieni-proposta/');
-
-        // Go to https://www.test-e2e-playwright-website.qa.credimi.com/ottieni-proposta/#step-intro
-        await page.goto('https://www.test-e2e-playwright-website.qa.credimi.com/ottieni-proposta/#step-intro');
 
         // Click text=Accetta
         await page.locator('text=Accetta').click();
