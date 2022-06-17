@@ -15,7 +15,7 @@ test.beforeAll((async () => {
 }))
 
 test.beforeEach(async ({ page }) => {
-  await page.goto('https://www.test-20220419-website.qa.credimi.com/ottieni-proposta')
+  await page.goto('https://www.main-website.qa.credimi.com/ottieni-proposta')
 })
 
 

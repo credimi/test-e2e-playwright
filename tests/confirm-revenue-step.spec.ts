@@ -6,8 +6,7 @@ test.use({
 
 test.describe('Confirm Revenue Step Application Tests', () => {
     test('1. If the user clicks on "Prosegui" without filling the revenue text field, then on the page is shown the "Campo Obbligatorio" message', async ({ page }) => {
-        // Go to https://www.test-20220419-website.qa.credimi.com/ottieni-proposta/
-        await page.goto('https://www.test-20220419-website.qa.credimi.com/ottieni-proposta/');
+        await page.goto('https://www.main-website.qa.credimi.com/ottieni-proposta/');
         // Click text=Accetta
         await page.locator('text=Accetta').click();
         // Fill input[name="email"]
@@ -17,7 +16,7 @@ test.describe('Confirm Revenue Step Application Tests', () => {
         await page.locator('text=Verifica se la tua azienda è finanziabile in 1 clickEmailPartita IVAInserisci la >> svg').click();
         // Click text=Prosegui
         await Promise.all([
-            page.waitForNavigation(/*{ url: 'https://www.test-20220419-website.qa.credimi.com/ottieni-proposta/#step-revenue' }*/),
+            page.waitForNavigation(/*{ url: 'https://www.main-website.qa.credimi.com/ottieni-proposta/#step-revenue' }*/),
             page.locator('text=Prosegui').click()
         ]);
         // Click text=Prosegui
@@ -27,8 +26,8 @@ test.describe('Confirm Revenue Step Application Tests', () => {
     });
 
     test('3a. If the user is not elegible, then he steps on the no product page', async ({ page }) => {
-        // Go to https://www.test-20220419-website.qa.credimi.com/ottieni-proposta/
-        await page.goto('https://www.test-20220419-website.qa.credimi.com/ottieni-proposta/');
+        // Go to https://www.main-website.qa.credimi.com/ottieni-proposta/
+        await page.goto('https://www.main-website.qa.credimi.com/ottieni-proposta/');
         // Click text=Accetta
         await page.locator('text=Accetta').click();
         // Fill input[name="email"]
@@ -39,14 +38,14 @@ test.describe('Confirm Revenue Step Application Tests', () => {
         await page.locator('text=Verifica se la tua azienda è finanziabile in 1 clickEmailPartita IVAInserisci la >> svg').click();
         // Click text=Prosegui
         await Promise.all([
-            page.waitForNavigation(/*{ url: 'https://www.test-20220419-website.qa.credimi.com/ottieni-proposta/#step-revenue' }*/),
+            page.waitForNavigation(/*{ url: 'https://www.main-website.qa.credimi.com/ottieni-proposta/#step-revenue' }*/),
             page.locator('text=Prosegui').click()
         ]);
         // Fill [placeholder="\36 0\.000"]
         await page.locator('[placeholder="\\36 0\\.000"]').fill('100000');
         // Click text=Prosegui
         await Promise.all([
-            page.waitForNavigation(/*{ url: 'https://www.test-20220419-website.qa.credimi.com/ottieni-proposta/#step-noproducts' }*/),
+            page.waitForNavigation(/*{ url: 'https://www.main-website.qa.credimi.com/ottieni-proposta/#step-noproducts' }*/),
             page.locator('text=Prosegui').click()
         ]);
         // Click text=Ci dispiace! Non possiamo procedere con la tua richiesta
@@ -55,8 +54,8 @@ test.describe('Confirm Revenue Step Application Tests', () => {
 
 
     test('3b. If the user is eligible, then it lands on the positive outcome page', async ({ page }) => {
-        // Go to https://www.test-20220419-website.qa.credimi.com/ottieni-proposta/
-        await page.goto('https://www.test-20220419-website.qa.credimi.com/ottieni-proposta/');
+        // Go to https://www.main-website.qa.credimi.com/ottieni-proposta/
+        await page.goto('https://www.main-website.qa.credimi.com/ottieni-proposta/');
         // Click text=Accetta
         await page.locator('text=Accetta').click();
         // Fill input[name="email"]
@@ -67,7 +66,7 @@ test.describe('Confirm Revenue Step Application Tests', () => {
         await page.locator('text=Verifica se la tua azienda è finanziabile in 1 clickEmailPartita IVAInserisci la >> svg').click();
         // Click text=Prosegui
         await Promise.all([
-            page.waitForNavigation(/*{ url: 'https://www.test-20220419-website.qa.credimi.com/ottieni-proposta/#step-revenue' }*/),
+            page.waitForNavigation(/*{ url: 'https://www.main-website.qa.credimi.com/ottieni-proposta/#step-revenue' }*/),
             page.locator('text=Prosegui').click()
         ]);
         // Click [placeholder="\36 0\.000"]
@@ -76,7 +75,7 @@ test.describe('Confirm Revenue Step Application Tests', () => {
         await page.locator('[placeholder="\\36 0\\.000"]').fill('200000');
         // Click text=Prosegui
         await Promise.all([
-            page.waitForNavigation(/*{ url: 'https://www.test-20220419-website.qa.credimi.com/ottieni-proposta/#step-eligible' }*/),
+            page.waitForNavigation(/*{ url: 'https://www.main-website.qa.credimi.com/ottieni-proposta/#step-eligible' }*/),
             page.locator('text=Prosegui').click()
         ]);
         // Click text=Inizia la richiesta

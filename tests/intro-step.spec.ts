@@ -6,8 +6,8 @@ test.use({
 
 test.describe('Intro Step Application tests', () => {
     test('1. If the user click on "Prosegui" without having filled the forms, then on the page is shown the "{fieldName} obbligatorio" text', async ({ page }) => {
-        // Go to https://www.test-20220419-website.qa.credimi.com/ottieni-proposta/
-        await page.goto('https://www.test-20220419-website.qa.credimi.com/ottieni-proposta/');
+        // Go to https://www.main-website.qa.credimi.com/ottieni-proposta/
+        await page.goto('https://www.main-website.qa.credimi.com/ottieni-proposta/');
         // Click text=Accetta
         await page.locator('text=Accetta').click();
         // Click text=Prosegui
@@ -23,8 +23,8 @@ test.describe('Intro Step Application tests', () => {
     });
 
     test('2. If the user inserts ad invalid email, then on the page is shown the message "Email non valida"', async ({ page }) => {
-        // Go to https://www.test-20220419-website.qa.credimi.com/ottieni-proposta/
-        await page.goto('https://www.test-20220419-website.qa.credimi.com/ottieni-proposta/');
+        // Go to https://www.main-website.qa.credimi.com/ottieni-proposta/
+        await page.goto('https://www.main-website.qa.credimi.com/ottieni-proposta/');
         // Click text=Accetta
         await page.locator('text=Accetta').click();
         // Fill input[name="email"]
@@ -39,8 +39,8 @@ test.describe('Intro Step Application tests', () => {
 
     test('3. If the user fills correctly the intro form but the VAT code is not correct, then on the page is shown "Partita IVA non valida, riprova"', async ({ page }) => {
 
-        // Go to https://www.test-20220419-website.qa.credimi.com/ottieni-proposta/
-        await page.goto('https://www.test-20220419-website.qa.credimi.com/ottieni-proposta/');
+        // Go to https://www.main-website.qa.credimi.com/ottieni-proposta/
+        await page.goto('https://www.main-website.qa.credimi.com/ottieni-proposta/');
 
         // Click text=Accetta
         await page.locator('text=Accetta').click();
@@ -59,10 +59,10 @@ test.describe('Intro Step Application tests', () => {
     });
 
     test('4. If the user fills correctly the intro form but the VAT code is not valid, then on the page is shown "Partita IVA non valida, riprova"', async ({ page }) => {
-        // Go to https://www.test-20220419-website.qa.credimi.com/ottieni-proposta/
-        await page.goto('https://www.test-20220419-website.qa.credimi.com/ottieni-proposta/');
-        // Go to https://www.test-20220419-website.qa.credimi.com/ottieni-proposta/#step-intro
-        await page.goto('https://www.test-20220419-website.qa.credimi.com/ottieni-proposta/#step-intro');
+        // Go to https://www.main-website.qa.credimi.com/ottieni-proposta/
+        await page.goto('https://www.main-website.qa.credimi.com/ottieni-proposta/');
+        // Go to https://www.main-website.qa.credimi.com/ottieni-proposta/#step-intro
+        await page.goto('https://www.main-website.qa.credimi.com/ottieni-proposta/#step-intro');
         // Click text=Accetta
         await page.locator('text=Accetta').click();
         // Fill input[name="email"]
